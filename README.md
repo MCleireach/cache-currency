@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Cache Currency
 
-Things you may want to cover:
+Pull down repository, bundle and run locally with `rails s`. Requires postgres to be running locally.
 
-* Ruby version
+I've been using postman but curl would do just as well. 
+`/fixer/` endpoint expects the following json
+period: "YYYY-MM-DD - YYYY-MM-DD"
+base: "EUR" or other three letter country code
+other_currency: "XXX" any other three letter country code recognised by Fixer
 
-* System dependencies
+Will respond with an array of json results each with the following structure
 
-* Configuration
+  {
+    date: YYYY-MM-DD,
+    base: "EUR", or whatever code specified
+    other_currency: "XXX",
+    rate: number, Fixer's calculated rate
+  }
 
-* Database creation
+A valid fixer api key will need to be added with `rails credentials:edit` under the following structure
 
-* Database initialization
+fixer:
+  api_key = "xxxxxxxx"
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
