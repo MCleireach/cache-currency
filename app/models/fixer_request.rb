@@ -1,0 +1,2 @@
+class FixerRequest < ApplicationRecord
+end
