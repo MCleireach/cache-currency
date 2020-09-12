@@ -21,8 +21,9 @@ Will respond with an array of json results each with the following structure
 
 A valid fixer api key will need to be added with `rails credentials:edit` under the following structure
 
-```fixer:
-  api_key: "xxxxxxxx"```
-  
+```
+fixer:
+  api_key: "xxxxxxxx"
+
 
 
